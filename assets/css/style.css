@@ -4676,8 +4676,14 @@ body {
 .header-wrap {
     background: rgba(255, 255, 255, 0.9);
     height: 80px;
-    position: relative;
+    position: fixed;
     z-index: 10;
+    width: 100%;
+    left: 0;
+}
+
+.header-wrap + .main{
+    padding-top: 80px;
 }
 
 .header-wrap .logo {
@@ -5080,12 +5086,12 @@ body {
 
     .account-mobile {
         position: absolute;
-        z-index: 9999;
+        z-index: 10;
         display: inline-block;
         margin: 5px 0;
         -webkit-transition: all 0.4s ease-in-out;
         transition: all 0.4s ease-in-out;
-        top: 8px;
+        top: 25px;
         right: 10px;
         opacity: 1;
     }
