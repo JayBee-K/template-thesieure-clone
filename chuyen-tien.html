@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<title>Thẻ siêu rẻ V2</title>
+	<meta name="description" content="Thẻ siêu rẻ V2">
+	<meta name="author" content="">
+
+	<meta property="og:title" content="Thẻ siêu rẻ V2">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Thẻ siêu rẻ V2">
+	<meta property="og:image" content="">
+
+	<link rel="icon" href="/assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="/assets/images/favicon.png">
+
+	<style>
+        :root {
+            --primary-color: #01497D;
+            --primary-rgb: 1, 73, 125;
+            --primary-hover: #0e68a9;
+            --secondary-color: #E42D1F;
+            --secondary-rgb: 228, 45, 31;
+            --secondary-hover: #f03c2e;
+            --color-body: #fafafa;
+            --color-border: #e9e9e9;
+            --color-dark: #121415;
+            --color-dark-gray: #444748;
+            --color-gray: #6a6868;
+            --transition: .3s all ease-in-out;
+        }
+	</style>
+	<link rel="stylesheet"
+		  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./assets/plugins/select2/css/select2.min.css">
+	<link rel="stylesheet" href="./assets/plugins/waves/waves.min.css">
+	<link rel="stylesheet" href="./assets/plugins/sweetalert2/sweetalert2.min.css">
+	<link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+<header id="header" class="header">
+	<div class="header-inner">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-2">
+					<div class="header-inner_logo">
+						<a href="index.html">
+							<img class="header-inner_logo__image" src="./assets/images/logo.png" alt="">
+						</a>
+						<div id="user-mobile" class="header-inner_mobile__user d-block d-lg-none">
+							<a id="call-user_mobile" href="javascript:void(0)">
+								<i class="fas fa-user"></i>
+							</a>
+							<ul class="list-unstyled mb-0">
+								<!--
+                                <li>
+                                    <a href="dang-nhap.html">Đăng nhập</a>
+                                </li>
+                                <li>
+                                    <a href="dang-ky.html">Đăng ký</a>
+                                </li>
+                                -->
+								<li class="name">User name</li>
+								<li class="wallet">
+									<span>
+										<i class="fas fa-wallet"></i>
+									</span>
+									Số dư:&nbsp;
+									<b>999.000 <sup>đ</sup></b>
+								</li>
+								<li>
+									<a href="">
+										<i class="fas fa-caret-right"></i>
+										Thông tin tài khoản
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fas fa-caret-right"></i>
+										Quỹ số dư
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fas fa-caret-right"></i>
+										Kết nối API
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fas fa-caret-right"></i>
+										Lịch sử mua thẻ
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fas fa-caret-right"></i>
+										Nạp quỹ
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fas fa-caret-right"></i>
+										Rút quỹ
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="header-inner_hamburger d-block d-lg-none">
+							<button type="button" class="no-animation" id="call-header_mobile">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-10 mobile-no_relative">
+					<div class="d-lg-flex align-items-center justify-content-between">
+						<div class="header-inner_nav">
+							<ul class="list-unstyled mb-0" id="hasMenuTopUp">
+								<li>
+									<a href="mua-ma-the.html">
+										Mua mã thẻ
+									</a>
+								</li>
+								<li>
+									<a href="doi-the-cao.html">
+										Đổi thẻ cào
+										<i class="fas fa-angle-down"></i>
+									</a>
+									<ul class="list-unstyled mb-0">
+										<li>
+											<a href="">
+												Đổi thẻ cào
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Đổi thẻ cào
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Đổi thẻ cào
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Đổi thẻ cào
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Đổi thẻ cào
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="rut-tien.html">
+										Rút tiền
+									</a>
+								</li>
+								<li>
+									<a href="chuyen-tien.html">
+										Chuyển tiền
+									</a>
+								</li>
+								<li>
+									<a href="nap-cuoc.html">
+										Nạp cước
+									</a>
+								</li>
+								<li>
+									<a href="tin-tuc.html">
+										Tin tức
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="header-inner_user d-lg-flex align-items-center justify-content-end">
+							<div class="header-inner_user__item d-none">
+								<a href="dang-nhap.html" class="btn btn-login waves-effect waves-light">
+									<i class="fas fa-sign-in-alt mr-2"></i>
+									Đăng nhập
+								</a>
+							</div>
+							<div class="header-inner_user__item d-none">
+								<a href="dang-ky.html" class="btn btn-register waves-effect waves-light">
+									<i class="fas fa-user-plus mr-2"></i>
+									Đăng ký
+								</a>
+							</div>
+							<div class="header-inner_user__item">
+								<span class="header-inner_user__price">
+									<span>
+										<i class="fas fa-wallet"></i>
+									</span>
+									Số dư:&nbsp;
+									<b>999.000 <sup>đ</sup></b>
+								</span>
+							</div>
+							<div class="header-inner_user__item">
+								<button type="button" class="btn btn-login waves-effect waves-light">
+									<i class="fas fa-user mr-2"></i>
+									User name
+									<i class="fal fa-angle-down btn-arrow ml-1"></i>
+								</button>
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="">
+											<i class="fas fa-caret-right"></i>
+											Thông tin tài khoản
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<i class="fas fa-caret-right"></i>
+											Quỹ số dư
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<i class="fas fa-caret-right"></i>
+											Kết nối API
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<i class="fas fa-caret-right"></i>
+											Lịch sử mua thẻ
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<i class="fas fa-caret-right"></i>
+											Nạp quỹ
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<i class="fas fa-caret-right"></i>
+											Rút quỹ
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="header-overlay" id="header-overlay"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div id="main" class="main">
+	<div class="section-breadcrumb">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item">
+							<a href="index.html">Trang chủ</a>
+						</li>
+						<li class="breadcrumb-item active"><span>Chuyển tiền</span></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section-gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7">
+					<div class="section-heading">
+						<h1 class="section-heading_title text-left">
+							Chuyển số dư
+						</h1>
+					</div>
+					<form action="">
+						<div class="form-inner form-inner_border">
+							<div class="row align-items-center form-group mb-4">
+								<div class="col-md-3">
+									<label for="" class="font-weight-bold mb-0">Chọn quỹ:</label>
+								</div>
+								<div class="col-md-9">
+									<select name="" id="ptthanhtoan" class="form-control">
+										<option value="">Tài khoản quỹ - 200,000 vnđ</option>
+									</select>
+								</div>
+							</div>
+							<div class="row align-items-center form-group mb-4">
+								<div class="col-md-3">
+									<label for="" class="font-weight-bold mb-0">Tài khoản nhận:</label>
+								</div>
+								<div class="col-md-9">
+									<input type="text" placeholder="Nhập email, số điện thoại hoặc username"
+										   class="form-control">
+								</div>
+							</div>
+							<div class="row align-items-center form-group mb-4">
+								<div class="col-md-3">
+									<label for="" class="font-weight-bold mb-0">Tên khoản nhận:</label>
+								</div>
+								<div class="col-md-9">
+									<input type="text" placeholder="" readonly
+										   class="form-control">
+								</div>
+							</div>
+							<div class="row align-items-center form-group mb-4">
+								<div class="col-md-3">
+									<label for="" class="font-weight-bold mb-0">Số tiền cần chuyển:</label>
+								</div>
+								<div class="col-md-9">
+									<input type="text" placeholder="Nhập số tiền"
+										   class="form-control">
+								</div>
+							</div>
+							<div class="row form-group mb-4">
+								<div class="col-md-3">
+									<label for="" class="font-weight-bold mb-0">Nội dung:</label>
+								</div>
+								<div class="col-md-9">
+									<textarea name="" id="" rows="2" class="form-control"
+											  placeholder="Nhập nội dung"></textarea>
+								</div>
+							</div>
+							<div class="row mt-3 mt-lg-4">
+								<div class="col-12 text-center">
+									<button class="btn btn-primary btn-send_card waves-effect waves-light">
+										Chuyển tiền
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-5 mt-5 mt-md-0">
+					<div class="section-heading">
+						<div class="section-heading_subtitle text-left">
+							PHÍ CHUYỂN TIỀN
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="section-table">
+							<tbody>
+							<tr>
+								<th class="text-left">Loại</th>
+								<th class="text-left">VNĐ</th>
+							</tr>
+							<tr>
+								<td class="text-left">Phí cố định</td>
+								<td class="text-left font-weight-bold">100 VNĐ</td>
+							</tr>
+							<tr>
+								<td class="text-left">Phí %</td>
+								<td class="text-left font-weight-bold">0 %</td>
+							</tr>
+							<tr>
+								<td class="text-left">Tổng chuyển đổi tối đa trong ngày</td>
+								<td class="text-left font-weight-bold">50,000,000 VNĐ</td>
+							</tr>
+							<tr>
+								<td class="text-left">Số tiền chuyển tối thiểu</td>
+								<td class="text-left font-weight-bold">10,000 VNĐ</td>
+							</tr>
+							<tr>
+								<td class="text-left">Số tiền chuyển tối đa</td>
+								<td class="text-left font-weight-bold">20,000,000 VNĐ</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="col-md-12 mt-5">
+					<div class="section-heading">
+						<div class="section-heading_subtitle text-left">
+							Lịch sử chuyển tiền
+						</div>
+					</div>
+					<div class="table-filter form-inner mb-2">
+						<form action="">
+							<div class="row row-25">
+								<div class="col-lg col-md-3 col-6">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Tìm kiếm...">
+									</div>
+								</div>
+								<div class="col-lg col-md-3 col-6">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Mã số...">
+									</div>
+								</div>
+								<div class="col-lg col-md-3 col-6">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Mã số...">
+									</div>
+								</div>
+								<div class="col-lg col-md-3 col-6">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Mã số...">
+									</div>
+								</div>
+								<div class="col-lg col-md-3 col-6">
+									<div class="form-group">
+										<select name="" id="" class="form-control">
+											<option value="">--Chọn giá tiền--</option>
+											<option value="">Dưới 50k</option>
+											<option value="">Từ 50k - 200k</option>
+											<option value="">Từ 200k - 1 Triệu</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg col-md-3 col-6">
+									<div class="form-group">
+										<select name="" id="" class="form-control">
+											<option value="">Chưa bán</option>
+											<option value="">Đã bán</option>
+											<option value="">Đã cọc</option>
+											<option value="">Tất cả</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg col-md-3 col-6">
+									<div class="form-group">
+										<select name="" id="" class="form-control">
+											<option value="">--Tất cả--</option>
+											<option value="">Có</option>
+											<option value="">Không</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-12 col-md flex-lg-grow-0">
+									<div class="d-flex align-items-center">
+										<button class="btn btn-primary waves-effect waves-light">
+											<span class="fal fa-search"></span>
+											Tim kiềm
+										</button>
+										<button class="btn text-nowrap waves-effect waves-light btn-pdf ml-1">
+											<i class="fas fa-file-pdf"></i>
+											Xuất PDF
+										</button>
+										<button class="btn text-nowrap waves-effect waves-light btn-excel ml-1">
+											<i class="fas fa-file-excel"></i>
+											Xuất Excel
+										</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="table-responsive">
+						<table class="section-table">
+							<tbody>
+							<tr>
+								<th class="text-left">Đơn hàng</th>
+								<th class="text-center">Số tiền</th>
+								<th class="text-left">Tài khoản nhận</th>
+								<th class="text-left">Ngày tạo</th>
+								<th class="text-center">Trạng thái</th>
+								<th class="text-left">Nội dung</th>
+							</tr>
+							<tr>
+								<td class="text-left">D603CEED5892C5</td>
+								<td class="text-center">350.000</td>
+								<td class="text-left">Nguyễn Văn Bình</td>
+								<td class="text-left">2021-03-15 20:40:37</td>
+								<td class="text-center">
+									<span class="badge badge-success">Đã nhận</span>
+								</td>
+								<td class="text-left">Không có nội dun</td>
+							</tr>
+							<tr>
+								<td class="text-left">D603CEED5892C5</td>
+								<td class="text-center">350.000</td>
+								<td class="text-left">Nguyễn Văn Bình</td>
+								<td class="text-left">2021-03-15 20:40:37</td>
+								<td class="text-center">
+									<span class="badge badge-danger">Đã hủy</span>
+								</td>
+								<td class="text-left">Không có nội dun</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer id="footer" class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 my-4">
+				<div class="footer-item">
+					<div class="footer-item_logo">
+						<a href="" class="d-inline-block">
+							<img src="./assets/images/logo.png"
+								 alt="">
+						</a>
+					</div>
+					<div class="footer-item_text">
+						Hệ thống nguồn thẻ uy tín số 1 Việt Nam
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-6 my-4">
+				<div class="footer-item">
+					<div class="footer-item_title">
+						Chính sách
+					</div>
+					<div class="footer-item_list">
+						<ul class="list-unstyled mb-0">
+							<li>
+								<a href="#">Về chúng tôi</a>
+							</li>
+							<li>
+								<a href="#">Chính sách bảo mật</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-6 my-4">
+				<div class="footer-item">
+					<div class="footer-item_title">
+						Hướng dẫn
+					</div>
+					<div class="footer-item_list">
+						<ul class="list-unstyled mb-0">
+							<li>
+								<a href="#">Chính sách bảo mật</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3 my-4">
+				<div class="footer-item">
+					<div class="footer-item_title">
+						Liên hệ
+					</div>
+					<div class="footer-item_info">
+						<p>
+							<i class="fas fa-phone-alt"></i>
+							1900 1565
+						</p>
+						<p>
+							<i class="fas fa-envelope"></i>
+							thecaopay@gmail.com
+						</p>
+						<p class="mt-3 d-flex align-items-center justify-content-start">
+							<a href="https://www.facebook.com/">
+								<i class="fab fa-facebook-f"></i>
+							</a>
+							<a href="https://www.youtube.com/">
+								<i class="fab fa-youtube"></i>
+							</a>
+							<a href="https://twitter.com/">
+								<i class="fab fa-twitter"></i>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-md-6">
+					<a href="#" class="footer-bottom_copyright">Software by Nencer Jsc.,</a>
+				</div>
+				<div class="col-md-6">
+					<div class="footer-dropdown d-flex align-items-center justify-content-lg-end">
+						<div class="dropdown dropdown-wrap">
+							<button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownCurrency" data-toggle="dropdown">
+								<i class="fas fa-dollar-sign"></i>
+								<span class="px-2">Tiền tệ</span>
+							</button>
+							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownCurrency">
+								<a class="dropdown-item" href="#">Dollars</a>
+								<a class="dropdown-item" href="#">Nhân dân tệ</a>
+								<a class="dropdown-item active" href="#">Vietnam đồng</a>
+							</div>
+						</div>
+						<div class="dropdown dropdown-wrap ml-2">
+							<button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownLanguage"
+									data-toggle="dropdown" aria-expanded="false">
+								<i class="fas fa-globe"></i>
+								<span class="px-2">Tiếng Việt (vi)</span>
+							</button>
+							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownLanguage" style="">
+								<a class="dropdown-item " href="#">English</a>
+								<a class="dropdown-item active " href="#">Tiếng
+									Việt
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/select2/js/select2.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/waves/waves.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/sweetalert2/sweetalert2.min.js"></script>
+<script type="text/javascript" src="./assets/js/scripts.js"></script>
+</body>
+</html>

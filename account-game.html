@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>Thẻ siêu rẻ V2</title>
+    <meta name="description" content="Thẻ siêu rẻ V2">
+    <meta name="author" content="">
+
+    <meta property="og:title" content="Thẻ siêu rẻ V2">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Thẻ siêu rẻ V2">
+    <meta property="og:image" content="">
+
+    <link rel="icon" href="/assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/images/favicon.png">
+
+    <style>
+        :root {
+            --primary-color: #01497D;
+            --primary-rgb: 1, 73, 125;
+            --primary-hover: #0e68a9;
+            --secondary-color: #E42D1F;
+            --secondary-rgb: 228, 45, 31;
+            --secondary-hover: #f03c2e;
+            --color-body: #fafafa;
+            --color-border: #e9e9e9;
+            --color-dark: #121415;
+            --color-dark-gray: #444748;
+            --color-gray: #6a6868;
+            --transition: .3s all ease-in-out;
+        }
+    </style>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="./assets/plugins/waves/waves.min.css">
+    <link rel="stylesheet" href="./assets/plugins/sweetalert2/sweetalert2.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<header id="header" class="header">
+    <div class="header-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header-inner_logo">
+                        <a href="index.html">
+                            <img class="header-inner_logo__image" src="./assets/images/logo.png" alt="">
+                        </a>
+                        <div id="user-mobile" class="header-inner_mobile__user d-block d-lg-none">
+                            <a id="call-user_mobile" href="javascript:void(0)">
+                                <i class="fas fa-user"></i>
+                            </a>
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="dang-nhap.html">Đăng nhập</a>
+                                </li>
+                                <li>
+                                    <a href="dang-ky.html">Đăng ký</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header-inner_hamburger d-block d-lg-none">
+                            <button type="button" class="no-animation" id="call-header_mobile">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-10 mobile-no_relative">
+                    <div class="d-lg-flex align-items-center justify-content-between flex-wrap">
+                        <div class="header-inner_nav">
+                            <ul class="list-unstyled mb-0" id="hasMenuTopUp">
+                                <li>
+                                    <a href="mua-ma-the.html">
+                                        Mua mã thẻ
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="doi-the-cao.html">
+                                        Đổi thẻ cào
+                                        <i class="fas fa-angle-down"></i>
+                                    </a>
+                                    <ul class="list-unstyled mb-0">
+                                        <li>
+                                            <a href="">
+                                                Đổi thẻ cào
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Đổi thẻ cào
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Đổi thẻ cào
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Đổi thẻ cào
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Đổi thẻ cào
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="rut-tien.html">
+                                        Rút tiền
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="chuyen-tien.html">
+                                        Chuyển tiền
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="nap-cuoc.html">
+                                        Nạp cước
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tin-tuc.html">
+                                        Tin tức
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header-inner_user d-lg-flex align-items-center justify-content-end">
+                            <div class="header-inner_user__item d-none">
+                                <a href="dang-ky.html" class="btn btn-register waves-effect waves-light">
+                                    <i class="fas fa-user mr-2"></i>
+                                    Đăng ký
+                                </a>
+                            </div>
+                            <div class="header-inner_user__item d-none">
+                                <a href="dang-nhap.html" class="btn btn-login waves-effect waves-light"><i
+                                        class="fas fa-lock-alt mr-2"></i>
+                                    Đăng nhập
+                                </a>
+                            </div>
+                            <div class="header-inner_user__item">
+                                <span class="header-inner_user__price">
+                                    <span>
+                                        <i class="fas fa-wallet"></i>
+                                    </span>
+                                    Số dư:&nbsp;
+                                    <b>999.000 <sup>đ</sup></b>
+                                </span>
+                            </div>
+                            <div class="header-inner_user__item">
+                                <button type="button" class="btn btn-login-outline waves-effect waves-light">
+                                    <i class="fas fa-user mr-2"></i>
+                                    User name
+                                </button>
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="">
+                                            <i class="fas fa-caret-right"></i>
+                                            Thông tin tài khoản
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fas fa-caret-right"></i>
+                                            Quỹ số dư
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fas fa-caret-right"></i>
+                                            Kết nối API
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fas fa-caret-right"></i>
+                                            Lịch sử mua thẻ
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fas fa-caret-right"></i>
+                                            Nạp quỹ
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fas fa-caret-right"></i>
+                                            Rút quỹ
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header-overlay" id="header-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="main" class="main">
+    <div class="pb-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ol class="breadcrumb mb-0 bg-transparent w-100 pl-0">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="text-dark">Trang chủ</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="text-muted">Account game</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pb-4">
+        <div class="container">
+            <div class="row row-10">
+                <div class="col-12">
+                    <div class="account-game">
+                        <div class="account-game_inner">
+                            <div class="account-game_header">
+                                <div class="row align-items-center">
+                                    <div class="col-md-12">
+                                        <div class="account-game_id">
+                                            Tài khoản Pubg Mobile - #513026
+                                        </div>
+                                        <div class="account-game_price">
+                                            Giá: 999,999 VNĐ
+                                            <del>1,111,111 VNĐ</del>
+                                        </div>
+                                        <div class="account-game_description">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio
+                                                exercitationem fugit illum ipsam magnam molestias quisquam recusandae
+                                                similique vel veniam. Hic inventore, maxime. Aliquam, aperiam at dolore
+                                                dolorem exercitationem fugiat fugit id in labore magni, minima nemo
+                                                nostrum
+                                                nulla perspiciatis provident quam quidem rem totam? A corporis doloribus
+                                                iste porro!
+                                            </p>
+                                            <ul>
+                                                <li>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                </li>
+                                                <li>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                </li>
+                                                <li>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                </li>
+                                                <li>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="account-game_buttons text-center text-md-left">
+                                            <a href="" class="btn btn-primary waves-effect waves-light">
+                                                MUA NGAY
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="account-game_body">
+                                <div class="row row-col-10">
+                                    <div class="col-6 col-md-4 col-lg-4">
+                                        <div class="account-game_body__desc">TRANG PHỤC: <span>41</span></div>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-4">
+                                        <div class="account-game_body__desc">SKIN SÚNG: <span>31</span></div>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-4">
+                                        <div class="account-game_body__desc">SỐ DƯ BP: <span>5,000</span></div>
+                                    </div>
+                                    <div class="col-12 col-md-4 col-lg-4">
+                                        <div class="account-game_body__desc">ĐĂNG KÝ TÀI KHOẢN: <span>GAME CENTER</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-8 col-lg-8">
+                                        <div class="account-game_body__desc">NỔI BẬT: <span>NGON RẺ + DƯ LIÊN KẾT CHƠI
+                                            ALL THIẾT BỊ</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="account-game_images">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="d-flex flex-column align-items-center justify-content-center">
+                                            <a href="https://nick.vn/storage/images/XcTcX66q3x_1646688036.jpg"
+                                               class="d-inline-block account-game_image" data-fancybox="account-game">
+                                                <img src="https://nick.vn/storage/images/XcTcX66q3x_1646688036.jpg"
+                                                     class="img-fluid" alt="">
+                                            </a>
+                                            <a href="https://nick.vn/storage/images/vSVyql1NGh_1646688036.jpg"
+                                               class="d-inline-block account-game_image" data-fancybox="account-game">
+                                                <img src="https://nick.vn/storage/images/vSVyql1NGh_1646688036.jpg"
+                                                     class="img-fluid" alt="">
+                                            </a>
+                                            <a href="https://nick.vn/storage/images/O1JvAbsGAw_1646688036.jpg"
+                                               class="d-inline-block account-game_image" data-fancybox="account-game">
+                                                <img src="https://nick.vn/storage/images/O1JvAbsGAw_1646688036.jpg"
+                                                     class="img-fluid" alt="">
+                                            </a>
+                                            <a href="https://nick.vn/storage/images/XcTcX66q3x_1646688036.jpg"
+                                               class="d-inline-block account-game_image" data-fancybox="account-game">
+                                                <img src="https://nick.vn/storage/images/XcTcX66q3x_1646688036.jpg"
+                                                     class="img-fluid" alt="">
+                                            </a>
+                                            <a href="https://nick.vn/storage/images/vSVyql1NGh_1646688036.jpg"
+                                               class="d-inline-block account-game_image" data-fancybox="account-game">
+                                                <img src="https://nick.vn/storage/images/vSVyql1NGh_1646688036.jpg"
+                                                     class="img-fluid" alt="">
+                                            </a>
+                                            <a href="https://nick.vn/storage/images/O1JvAbsGAw_1646688036.jpg"
+                                               class="d-inline-block account-game_image" data-fancybox="account-game">
+                                                <img src="https://nick.vn/storage/images/O1JvAbsGAw_1646688036.jpg"
+                                                     class="img-fluid" alt="">
+                                            </a>
+                                            <a href="https://nick.vn/storage/images/XcTcX66q3x_1646688036.jpg"
+                                               class="d-inline-block account-game_image" data-fancybox="account-game">
+                                                <img src="https://nick.vn/storage/images/XcTcX66q3x_1646688036.jpg"
+                                                     class="img-fluid" alt="">
+                                            </a>
+                                            <a href="https://nick.vn/storage/images/vSVyql1NGh_1646688036.jpg"
+                                               class="d-inline-block account-game_image" data-fancybox="account-game">
+                                                <img src="https://nick.vn/storage/images/vSVyql1NGh_1646688036.jpg"
+                                                     class="img-fluid" alt="">
+                                            </a>
+                                            <a href="https://nick.vn/storage/images/O1JvAbsGAw_1646688036.jpg"
+                                               class="d-inline-block account-game_image" data-fancybox="account-game">
+                                                <img src="https://nick.vn/storage/images/O1JvAbsGAw_1646688036.jpg"
+                                                     class="img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="account-game_button mt-4 text-center">
+                                <a href="" class="btn btn-primary waves-effect waves-light">
+                                    MUA NGAY
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-4">
+        <div class="container">
+            <div class="row row-10">
+                <div class="col-12">
+                    <div class="block-list-game pb-2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="template-1-heading text-center">
+                                        <h4>
+                                            Game liên quan
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-col-10 row-cols-lg-5">
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="card-game card">
+                                        <div class="card-header">
+                                            <a href="">
+                                                <img src="./assets/images/game/list/1.gif" alt="">
+                                                <div class="badge">
+                                                    Giảm <b class="ml-1 mt--4">30%</b>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-title">
+                                                <a href="">
+                                                    Danh mục game Liên quân
+                                                </a>
+                                            </div>
+                                            <div class="card-text">
+                                                Số tài khoản: 20,746
+                                            </div>
+                                            <div class="card-button">
+                                                <a href="" class="btn btn-success template-1-btn">
+                                                    Mua ngay
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="card-game card">
+                                        <div class="card-header">
+                                            <a href="">
+                                                <img src="./assets/images/game/list/2.gif" alt="">
+                                                <div class="badge badge-new">
+                                                    <b>New</b>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-title">
+                                                <a href="">
+                                                    Danh mục game Liên quân
+                                                </a>
+                                            </div>
+                                            <div class="card-text">
+                                                Số tài khoản: 20,746
+                                            </div>
+                                            <div class="card-button">
+                                                <a href="" class="btn btn-success template-1-btn">
+                                                    Mua ngay
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="card-game card">
+                                        <div class="card-header">
+                                            <a href="">
+                                                <img src="./assets/images/game/list/3.gif" alt="">
+                                                <div class="badge">
+                                                    Giảm <b class="ml-1 mt--4">30%</b>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-title">
+                                                <a href="">
+                                                    Danh mục game Liên quân
+                                                </a>
+                                            </div>
+                                            <div class="card-text">
+                                                Số tài khoản: 20,746
+                                            </div>
+                                            <div class="card-button">
+                                                <a href="" class="btn btn-success template-1-btn">
+                                                    Mua ngay
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="card-game card">
+                                        <div class="card-header">
+                                            <a href="">
+                                                <img src="./assets/images/game/list/4.gif" alt="">
+                                                <div class="badge badge-new">
+                                                    <b>New</b>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-title">
+                                                <a href="">
+                                                    Danh mục game Liên quân
+                                                </a>
+                                            </div>
+                                            <div class="card-text">
+                                                Số tài khoản: 20,746
+                                            </div>
+                                            <div class="card-button">
+                                                <a href="" class="btn btn-success template-1-btn">
+                                                    Mua ngay
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="card-game card">
+                                        <div class="card-header">
+                                            <a href="">
+                                                <img src="./assets/images/game/list/1.gif" alt="">
+                                                <div class="badge">
+                                                    Giảm <b class="ml-1 mt--4">30%</b>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-title">
+                                                <a href="">
+                                                    Danh mục game Liên quân
+                                                </a>
+                                            </div>
+                                            <div class="card-text">
+                                                Số tài khoản: 20,746
+                                            </div>
+                                            <div class="card-button">
+                                                <a href="" class="btn btn-success template-1-btn">
+                                                    Mua ngay
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 my-4">
+                <div class="footer-item">
+                    <div class="footer-item_logo">
+                        <a href="" class="d-inline-block account-game_image">
+                            <img src="./assets/images/logo.png"
+                                 alt="">
+                        </a>
+                    </div>
+                    <div class="footer-item_text">
+                        Hệ thống nguồn thẻ uy tín số 1 Việt Nam
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 my-4">
+                <div class="footer-item">
+                    <div class="footer-item_title">
+                        Chính sách
+                    </div>
+                    <div class="footer-item_list">
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#">Về chúng tôi</a>
+                            </li>
+                            <li>
+                                <a href="#">Chính sách bảo mật</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 my-4">
+                <div class="footer-item">
+                    <div class="footer-item_title">
+                        Hướng dẫn
+                    </div>
+                    <div class="footer-item_list">
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#">Chính sách bảo mật</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 my-4">
+                <div class="footer-item">
+                    <div class="footer-item_title">
+                        Liên hệ
+                    </div>
+                    <div class="footer-item_info">
+                        <p>
+                            <i class="fas fa-phone-alt"></i>
+                            1900 1565
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            thecaopay@gmail.com
+                        </p>
+                        <p class="mt-3 d-flex align-items-center justify-content-start footer-item_info__social">
+                            <a href="https://www.facebook.com/">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.youtube.com/">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://twitter.com/">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <a href="#" class="footer-bottom_copyright">Software by Nencer Jsc.,</a>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer-dropdown d-flex align-items-center justify-content-lg-end">
+                        <div class="dropdown dropdown-wrap">
+                            <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownCurrency"
+                                    data-toggle="dropdown">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span class="px-2">Tiền tệ</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownCurrency">
+                                <a class="dropdown-item" href="#">Dollars</a>
+                                <a class="dropdown-item" href="#">Nhân dân tệ</a>
+                                <a class="dropdown-item active" href="#">Vietnam đồng</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropdown-wrap ml-2">
+                            <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownLanguage"
+                                    data-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-globe"></i>
+                                <span class="px-2">Tiếng Việt (vi)</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownLanguage" style="">
+                                <a class="dropdown-item " href="#">English</a>
+                                <a class="dropdown-item active " href="#">Tiếng
+                                    Việt
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/select2/js/select2.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/waves/waves.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/sweetalert2/sweetalert2.min.js"></script>
+<script type="text/javascript" src="./assets/js/scripts.js"></script>
+</body>
+</html>
