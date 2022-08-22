@@ -613,6 +613,10 @@ $(function () {
 		})
 	});
 
+	/***
+	 * Header thẻ siêu rẻ
+	 */
+
 	$('#navigation_icon, #navigation-backdrop').click(function () {
 		$(this).closest('.navigation').toggleClass('nav-open');
 	});
