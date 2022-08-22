@@ -4672,6 +4672,7 @@ body {
 /***
  * Header thẻ siêu rẻ
  */
+
 .header-wrap {
     background: rgba(255, 255, 255, 0.9);
     height: 80px;
@@ -5184,5 +5185,10 @@ body {
         -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
         transform: translateX(0);
+    }
+
+    .footer-bottom .footer-bottom_copyright,
+    .footer-bottom .footer-dropdown .btn-dropdown{
+        font-size: 13.5px;
     }
 }
