@@ -1,5 +1,5 @@
 const slideBanner = function () {
-	if($('#slideBanner').length > 0) {
+	if ($('#slideBanner').length > 0) {
 		new Swiper('#slideBanner', {
 			loop: false,
 			simulateTouch: false,
@@ -20,7 +20,7 @@ const slideBanner = function () {
 		});
 	}
 
-	if($('#swiper-banner').length > 0) {
+	if ($('#swiper-banner').length > 0) {
 		new Swiper('#swiper-banner', {
 			loop: false,
 			simulateTouch: false,
@@ -260,7 +260,23 @@ $(function () {
 			$(".account-mobile_nav.is-show").removeClass('is-show'));
 	});
 
-	if($('.header-wrap').length) {
+	if ($('.header-wrap').length) {
 		$('body').addClass('pt-80');
+	}
+
+	/***
+	 * Xử lý độ rộng menu
+	 */
+
+	if (windowWidth > 768) {
+		let widthContainer = parseInt($('#js-header').children('.container').width()),
+			widthNavigation = parseInt($('#js-header').children('.container').children('.navigation').width()),
+			widthLogo = parseInt($('#js-header').children('.container').children('.logo').width()),
+			widthUser = parseInt($('#js-header').children('.container').children('.action-user').width()),
+			widthRatio = (widthNavigation - widthLogo - widthUser) / widthContainer;
+
+		if(widthRatio > 0.4) {
+			$('#js-header').addClass('header-sort');
+		}
 	}
 });

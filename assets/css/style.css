@@ -3461,15 +3461,13 @@ body {
 
 .header-wrap {
     background: rgba(255, 255, 255, 1);
-    height: 80px;
-    position: fixed;
-    z-index: 10;
+//height: 80px; position: fixed; z-index: 10;
     width: 100%;
     left: 0;
 }
 
 .header-wrap + .main {
-    padding-top: 80px;
+    padding-top: 85px;
 }
 
 .header-wrap .logo {
@@ -3986,7 +3984,7 @@ body {
     }
 }
 
-@media  screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .account-mobile {
         display: none !important;
     }
@@ -3995,17 +3993,77 @@ body {
         display: block !important;
         padding-top: 10px;
     }
+
+    .header-sort > .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .header-sort > .container > * {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+    }
+
+    .header-sort > .container > .logo {
+        order: 1;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 5px;
+    }
+
+    .header-sort > .container > .user-header,
+    .header-sort > .container > .loginBox {
+        order: 2;
+        margin-left: auto;
+    }
+
+    .header-sort > .container > .navigation {
+        order: 3;
+        padding-top: 5px;
+    }
+
+    .header-sort .navigation > ul > li > a{
+        padding: 8px;
+    }
 }
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
     .header-wrap > .container {
         position: relative;
     }
+
     .container {
         max-width: 95%;
     }
 
-    .account-mobile{
+    .account-mobile {
         top: 8px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .row-mb-5 {
+        margin-top: -5px;
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+
+    .row-mb-5 > [class*=col] {
+        padding: 5px;
+    }
+
+    .card-price {
+        padding: 10px;
+        margin-bottom: 0;
+        line-height: 1.4;
+    }
+
+    .card-price svg {
+        width: 18px;
+        height: 18px;
+        bottom: 6px;
+        left: 7px;
     }
 }
