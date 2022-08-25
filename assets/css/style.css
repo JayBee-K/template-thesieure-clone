@@ -3997,3 +3997,16 @@ body {
         padding-top: 10px;
     }
 }
+
+@media screen and (min-width: 576px) and (max-width: 991px) {
+    .header-wrap > .container {
+        position: relative;
+    }
+    .container {
+        max-width: 95%;
+    }
+
+    .account-mobile{
+        top: 8px;
+    }
+}
